@@ -1,0 +1,66 @@
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    background-image: url('../../assets/images/error_img.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.error-content {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    padding: 10rem 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.error-code {
+    font-size: 10rem;
+    margin: 0;
+    color: var(--secondary-color);
+}
+
+.error-message {
+    font-size: 8rem;
+    margin: 1rem 0;
+    color: var(--secondary-color);
+}
+
+.error-text{
+color: var(--secondary-color);
+font-size: 2rem;
+margin: 1rem 0;
+}
+
+.error-button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.error-button:hover {
+    color: var(--accent-color);
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 600px) {
+    .error-code {
+        font-size: 5rem;
+    }
+    
+    .error-message {
+        font-size: 4rem;
+    
+    }
+}

@@ -17,7 +17,7 @@ export const ContactUs = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            const elements = document.querySelectorAll('.contact_border');
+            const elements = document.querySelectorAll('.contact-border');
             elements.forEach(e => {
                 const rect = e.getBoundingClientRect();
                 if (rect.top <= window.innerHeight && rect.bottom >= 0) {
@@ -68,36 +68,38 @@ export const ContactUs = () => {
     return (
         <>
             <div className="contact">
-                <div className="contact_img">
-                    <div className="contact_text">
+                <div className="contact-img">
+                    <div className="contact-text">
                         <h1>ԿԱՊ ՄԵԶ ՀԵՏ</h1>
                         <h6><span>Գլխավոր</span> / Կապ</h6>
                     </div>
                 </div>
-                <div className="contact_info">
-                    <div className="contact_border">
-                        <div className="contact_icon"><RiHomeOfficeFill /></div>
-                        <h2 className="contact_title">Office  Addres</h2>
-                        <p className="cotact_text">ք. Երևան, Դավիթ Անհաղթ 11/6</p>
+                <div className="contact-info">
+                    <div className="contact-border">
+                        <div className="contact-icon"><RiHomeOfficeFill /></div>
+                        <h2 className="contact-title">Office  Addres</h2>
+                        <p className="cotact-text"> ք. Երևան, Հրաչյա Քոչար 147/1</p>
                     </div>
-                    <div className="contact_border">
-                        <div className="contact_icon"><FaPhone /></div>
-                        <h2 className="contact_title">CONTACT NUMBER</h2>
-                        <p className="cotact_text"> +374 (88) 000 000</p>
+                    <div className="contact-border">
+                        <div className="contact-icon"><FaPhone /></div>
+                        <h2 className="contact-title">CONTACT NUMBER</h2>
+                        <p className="cotact-text"> +374 (11) 488 282</p>
+                        <p className="cotact-text"> +374 (11) 468 282</p>
+
                     </div>
-                    <div className="contact_border">
-                        <div className="contact_icon"><IoIosMail /> </div>
-                        <h2 className="contact_title">EMAIL ID</h2>
-                        <p className="cotact_text">info@smaccounting.am</p>
+                    <div className="contact-border">
+                        <div className="contact-icon"><IoIosMail /> </div>
+                        <h2 className="contact-title">EMAIL ID</h2>
+                        <p className="cotact-text">info@smaccounting.am</p>
                     </div>
                 </div>
-                <div className="contact_me">
+                <div className="contact-me">
                     <img src={messeg_img} alt="" />
 
-                    <form className="contact_form"
+                    <form className="contact-form"
                         ref={form}
                         onSubmit={sendEmail}>
-                    <h2 className="messeg_title" >Ուղարկեք մեզ հաղորդագրություն</h2>
+                    <h2 className="messeg-title" >Ուղարկեք մեզ հաղորդագրություն</h2>
 
                         <div className="input-box">
                             <div className="input-field">
@@ -131,7 +133,7 @@ export const ContactUs = () => {
                         <div>
                             <button
                                 type="submit"
-                                className="contact_btn">
+                                className="contact-btn">
                                 Ուղարկել
                             </button>
                         </div>
@@ -150,16 +152,15 @@ export const ContactUs = () => {
                         />
                     </form>
                 </div>
-                <div className="contact_map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.2301660845555!2d44.5269981758766!3d40.203942771474566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd2d69a4f031%3A0x4b097a3c8a52eaa7!2s11%20Davit%20Anhaght%20Street%2C%20Yerevan%200014!5e0!3m2!1sru!2sam"
-                width="600"
-                height="450"
-                style={{ border: "0" }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
+                <div className="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1865.0076900942845!2d44.50562924612217!3d40.20316991008341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abd387fb7fd3f%3A0xc540c6ec2630aead!2sHrachya%20Kochar%20St%2C%20Yerevan!5e0!3m2!1sru!2sam!4v1722245166997!5m2!1sru!2sam"
+                width="600" 
+                height="450" 
+                style={{border:"0"}}
+                 allowfullscreen="" 
+                 loading="lazy" 
+                 referrerpolicy="no-referrer-when-downgrade"
+                 ></iframe>
         </div>
             </div>
         </>

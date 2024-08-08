@@ -1,10 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 :root {
-    --primary-color: rgb(4, 35, 49);
-    --accent-color: rgb(0, 128, 128); 
-  --secondary-color: rgb(255, 255, 255); 
+  --primary-color: rgb(4, 35, 49);
+  --accent-color: #1a6db1;
+  --secondary-color: rgb(255, 255, 255);
+  --text-color: #757575;
+  --title-color: #011126;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-color);
+  border-radius: 60vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background:var(--accent-color);
 }

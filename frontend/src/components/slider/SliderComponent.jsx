@@ -3,12 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import "./style.css"; 
+
 import img1 from "../../assets/images/img1.jpg";
 import img2 from "../../assets/images/img2.jpg";
+
+import { useNavigate } from "react-router-dom";
 
 const SliderComponent = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
+  const navigate = useNavigate();
+
 
   const settings = {
     dots: true,
@@ -17,7 +22,7 @@ const SliderComponent = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 4000,
     afterChange: (current) => {
       setCurrentSlide(current);
       setTimeout(() => setIsAnimating(true), 50); 
@@ -50,28 +55,44 @@ const SliderComponent = () => {
     ]
   };
 
-  useEffect(() => {
-    const slides = document.querySelectorAll('.slick-slide');
-    slides.forEach((slide, index) => {
-      const h3 = slide.querySelector('h3');
-      const p = slide.querySelector('p');
-      const buttons = slide.querySelectorAll('.btn_slider1');
+  
+  const onContact = () => {
+    navigate('/contact');
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+};
 
-      if (index === currentSlide && isAnimating) {
-        h3.style.animation = 'fadeInUp 1s ease-in-out forwards 0.5s';
-        p.style.animation = 'fadeInUp 1s ease-in-out forwards 1s';
-        buttons.forEach((button, btnIndex) => {
-          button.style.animation = `homeContenhbtn 1s ease-in-out forwards ${1.5 + btnIndex * 0.2}s`;
-        });
-      } else {
-        h3.style.animation = '';
-        p.style.animation = '';
-        buttons.forEach((button) => {
-          button.style.animation = '';
-        });
+const onAbout = () => {
+  navigate('/about');
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+  });
+};
+
+
+useEffect(() => {
+  const slides = document.querySelectorAll('.slick-slide');
+  slides.forEach((slide, index) => {
+    const h3 = slide.querySelector('h3');
+    const p = slide.querySelector('p');
+    const buttons = slide.querySelectorAll('.btn_slider1');
+    if (h3) {
+      h3.style.animation = index === currentSlide && isAnimating ? 'fadeInUp 1s ease-in-out forwards 0.5s' : '';
+    }
+    if (p) {
+      p.style.animation = index === currentSlide && isAnimating ? 'fadeInUp 1s ease-in-out forwards 1s' : '';
+    }
+    buttons.forEach((button, btnIndex) => {
+      if (button) {
+        button.style.animation = index === currentSlide && isAnimating ? `homeContenhbtn 1s ease-in-out forwards ${1.5 + btnIndex * 0.2}s` : '';
       }
     });
-  }, [currentSlide, isAnimating]);
+  });
+}, [currentSlide, isAnimating]);
+
 
   return (
     <div className="slider-container">
@@ -81,8 +102,8 @@ const SliderComponent = () => {
           <div className={`overlay ${currentSlide === 0 && isAnimating ? 'animate' : ''}`}>
             <h3>Let New Tech Move Your Business Forward</h3>
             <p>Embrace innovation and technology </p>
-            <button className="btn_slider1">About Me</button>
-            <button className="btn_slider2">Contact Us</button>
+            <button onClick={onAbout} className="btn_slider1">Մեր Մասին</button>
+            <button onClick={onContact} className="btn_slider2">ԿԱՊ</button>
           </div>
         </div>
         <div className="slide">
@@ -90,8 +111,8 @@ const SliderComponent = () => {
           <div className={`overlay center-text ${currentSlide === 1 && isAnimating ? 'animate' : ''}`}>
             <h3>Professional Accounting Services</h3>
             <p>Helping you achieve financial success</p>
-            <button className="btn_slider1">Abote Me</button>
-            <button className="btn_slider2">Contact Us</button>
+            <button  onClick={onAbout}  className="btn_slider1">Մեր Մասին</button>
+            <button onClick={onContact}  className="btn_slider2">ԿԱՊ</button>
           </div>
         </div>
       </Slider>

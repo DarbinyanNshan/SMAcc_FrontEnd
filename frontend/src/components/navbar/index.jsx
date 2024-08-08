@@ -30,18 +30,19 @@ export const NavBar = () => {
       <div className="info">
         <div className="contact-data">
           <p className="time">
-            <span><BiTimeFive /></span>Երկ. - Ուրբ. 09:00-18:00
+            <span><BiTimeFive /></span>Երկ. - Շաբ. 09:00-19:00
           </p>
           <p className="mail">
             <span><GoMail /></span> info@smaccounting.am
           </p>
           <p className="phone-number">
-            <span><FiPhoneCall /></span>+374 (88)000 000
+            <span><FiPhoneCall /></span>+374  (11) 468 282 
+            <span><FiPhoneCall /></span> +374  (11) 488 282 
           </p>
         </div>
         <div className="address">
           <p className="map-text">
-            <span><BiMap /></span> ք. Երևան, Դավիթ Անհաղթ 11/6
+            <span><BiMap /></span> ք. Երևան,  Հրաչյա Քոչար 147/1
           </p>
         </div>
       </div>

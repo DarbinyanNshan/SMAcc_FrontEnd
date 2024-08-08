@@ -1,0 +1,44 @@
+.about-img{
+    background-image: url(../../assets/images/aboutus.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 35vh;
+    position: relative;
+}
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+
+.about-text{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    text-align: left;
+    z-index: 1;
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.about-text h6 {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+.about-text span {
+    color: var(--accent-color);
+}
